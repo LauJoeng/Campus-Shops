@@ -47,11 +47,12 @@ public class ImageUtil {
         makeDirPath(targetAddr);
         String relativeAddr = targetAddr+realFileName+extension;
         logger.debug("current relativeAddr is:"+relativeAddr);
-        File dest = new File(PathUtil.getImgBasePath()+realFileName);
-        logger.debug("current completeAddr is:"+PathUtil.getImgBasePath()+realFileName);
+        File dest = new File(PathUtil.getImgBasePath()+relativeAddr);
+        logger.debug("current completeAddr is:"+PathUtil.getImgBasePath()+relativeAddr);
+        System.out.println("ttttttttttttt:"+basePath);
         try{
             Thumbnails.of(thumbnail).size(200,200)
-            .watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath+"/watermark.jpg")),0.25f)
+            .watermark(Positions.BOTTOM_RIGHT,ImageIO.read(new File(basePath+"watermark.jpg")),0.5f)
             .outputQuality(0.8f)
             .toFile(dest);
         }catch (IOException e){
@@ -102,6 +103,5 @@ public class ImageUtil {
                 .watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File("C:\\Users\\Yang\\Desktop\\ps图片\\newmeggy.jpg")),0.5f)
                 .outputQuality(0.8f)
                 .toFile("C:\\Users\\Yang\\Desktop\\ps图片\\newmeggy.jpg");
-        ;
     }
 }

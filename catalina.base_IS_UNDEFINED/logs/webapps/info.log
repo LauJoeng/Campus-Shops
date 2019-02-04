@@ -1,0 +1,15 @@
+2019-02-04 20:49:55.478 [main] DEBUG com.yang.util.ImageUtil - current relativeAddr is:\upload\item\shop\30\2019020420495578474.jpg
+2019-02-04 20:49:55.490 [main] DEBUG com.yang.util.ImageUtil - current completeAddr is:H:\projectdev\image\2019020420495578474
+2019-02-04 20:49:55.778 [main] ERROR com.yang.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+2019-02-04 20:59:53.843 [main] DEBUG com.yang.util.ImageUtil - current relativeAddr is:\upload\item\shop\31\2019020420595344940.jpg
+2019-02-04 20:59:53.845 [main] DEBUG com.yang.util.ImageUtil - current completeAddr is:H:\projectdev\image\2019020420595344940
+2019-02-04 20:59:53.910 [main] ERROR com.yang.util.ImageUtil - javax.imageio.IIOException: Can't read input file!
+2019-02-04 21:07:13.275 [main] DEBUG com.yang.util.ImageUtil - current relativeAddr is:\upload\item\shop\32\2019020421071373992.jpg
+2019-02-04 21:07:13.279 [main] DEBUG com.yang.util.ImageUtil - current completeAddr is:H:\projectdev\image\2019020421071373992
+2019-02-04 21:12:49.221 [main] DEBUG com.yang.util.ImageUtil - current relativeAddr is:\upload\item\shop\33\2019020421124924493.jpg
+2019-02-04 21:12:49.223 [main] DEBUG com.yang.util.ImageUtil - current completeAddr is:H:\projectdev\image\\upload\item\shop\33\2019020421124924493.jpg
+2019-02-04 21:17:22.387 [main] DEBUG com.yang.util.ImageUtil - current relativeAddr is:upload\item\shop\34\2019020421172235747.jpg
+2019-02-04 21:17:22.390 [main] DEBUG com.yang.util.ImageUtil - current completeAddr is:H:\projectdev\image\upload\item\shop\34\2019020421172235747.jpg
+2019-02-04 21:17:22.457 [main] ERROR com.yang.util.ImageUtil - javax.imageio.IIOException: Can't create an ImageInputStream!
+2019-02-04 21:18:30.166 [main] DEBUG com.yang.util.ImageUtil - current relativeAddr is:upload\item\shop\35\2019020421183098439.jpg
+2019-02-04 21:18:30.168 [main] DEBUG com.yang.util.ImageUtil - current completeAddr is:H:\projectdev\image\upload\item\shop\35\2019020421183098439.jpg

@@ -40,6 +40,19 @@ public class ShopDaoTest extends BaseTest {
         assertEquals(1,effectedNum);
     }
 
+    @Test
+    public void test(){
+        Shop shop = new Shop();
+        shop.setShopImg("hahaha");
+        int i=0;
+        change(i);
+        System.out.println(i);
+    }
+
+    private void change(int i) {
+        i = 1;
+    }
+
 
     @Test
     public void testUpdateShop(){

@@ -25,7 +25,7 @@ public class ShopExecution {
     public ShopExecution(){}
 
     //店铺操作失败的时候使用的构造器
-    private ShopExecution(ShopStateEnum stateEnum){
+    public ShopExecution(ShopStateEnum stateEnum){
         this.state = stateEnum.getState();
         this.stateInfo = stateEnum.getStateInfo();
     }
