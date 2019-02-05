@@ -1,2 +1,8 @@
 /target/
 /o2o/
+
+.idea/
+.settings/
+.classpath
+.project
+.springBeans
