@@ -1,4 +1,4 @@
-package com.yang.web;
+package com.yang.web.superadmin;
 
 import java.util.ArrayList;
 import java.util.HashMap;

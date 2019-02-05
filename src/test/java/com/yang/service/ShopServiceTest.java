@@ -10,6 +10,9 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Date;
 
 import static net.sf.ezmorph.test.ArrayAssertions.assertEquals;
@@ -20,7 +23,7 @@ public class ShopServiceTest extends BaseTest {
     private ShopService shopService;
 
     @Test
-    public void testAddShop(){
+    public void testAddShop() throws FileNotFoundException {
         Shop shop = new Shop();
         Area area = new Area();
         ShopCategory shopCategory = new ShopCategory();
@@ -29,7 +32,7 @@ public class ShopServiceTest extends BaseTest {
         shop.setOwnerId(8L);
         shop.setArea(area);
         shop.setShopCategory(shopCategory);
-        shop.setShopName("测试店铺Service2");
+        shop.setShopName("测试店铺Service3");
         shop.setShopDesc("test");
         shop.setShopAddr("test");
         shop.setPhone("test");
@@ -37,7 +40,8 @@ public class ShopServiceTest extends BaseTest {
         shop.setEnableStatus(ShopStateEnum.CHECK.getState());
         shop.setAdvice("审核中");
         File shopImg = new File("C:\\Users\\Yang\\Desktop\\ps图片\\meggy.jpg");
-        ShopExecution shopExecution = shopService.addShop(shop, shopImg);
+        InputStream is = new FileInputStream(shopImg);
+        ShopExecution shopExecution = shopService.addShop(shop, is,shopImg.getName());
         assertEquals(ShopStateEnum.CHECK.getState(),shopExecution.getState());
     }
 
