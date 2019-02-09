@@ -7,6 +7,7 @@ import com.yang.enums.ShopStateEnum;
 import com.yang.service.AreaService;
 import com.yang.service.ShopCategoryService;
 import com.yang.service.ShopService;
+import com.yang.util.CodeUtil;
 import com.yang.util.HttpServletRequestUtil;
 import com.yang.util.ImageUtil;
 import com.yang.util.PathUtil;
@@ -63,12 +64,18 @@ public class ShopManagementController {
     private Map<String,Object>registerShop(HttpServletRequest request){
         //1.接收并转换相应的参数，包括店铺信息以及图片信息
         Map<String,Object>modelMap = new HashMap<>();
+        if (!CodeUtil.checkVerifyCode(request)){
+            modelMap.put("success",false);
+            modelMap.put("errMsg","验证码输入错误");
+            return modelMap;
+        }
         String shopStr = HttpServletRequestUtil.getString(request,"shopStr");
         ObjectMapper mapper = new ObjectMapper();
         Shop shop = null;
         try {
             shop = mapper.readValue(shopStr,Shop.class);
-        }catch (Exception e){
+        }catch (IOException e){
+            e.printStackTrace();
             modelMap.put("success",false);
             modelMap.put("errMsg",e.getMessage());
             return modelMap;
