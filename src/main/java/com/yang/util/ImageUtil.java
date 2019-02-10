@@ -103,4 +103,23 @@ public class ImageUtil {
                 .outputQuality(0.8f)
                 .toFile("C:\\Users\\Yang\\Desktop\\ps图片\\newmeggy.jpg");
     }
+
+    /**
+     * storePath是文件路径还是目录路径
+     * 如果storePath是文件路径则删除该文件
+     * 如果storePath是目录路径则删除该目录下的所有文件
+     * @param storePath
+     */
+    public static void deleteFileOrPath(String storePath){
+        File fileOrPath = new File(PathUtil.getImgBasePath()+storePath);
+        if (fileOrPath.exists()){
+            if (fileOrPath.isDirectory()){
+                File files[] = fileOrPath.listFiles();
+                for (File file:files){
+                    file.delete();
+                }
+            }
+            fileOrPath.delete();
+        }
+    }
 }

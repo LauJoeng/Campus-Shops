@@ -9,58 +9,73 @@
 	<!--1.配置数据库相关参数properties属性 -->
 	<context:property-placeholder location="classpath:jdbc.properties"/>
 	<!-- 2.数据库连接池 -->
-	<bean id="abstractDataSource" abstract="true" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
-		<!-- 配置连接池属性 -->
-		<!--<property name="driverClass" value="${jdbc.driver}" />
+	<!--<bean id="abstractDataSource" abstract="true" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		&lt;!&ndash; 配置连接池属性 &ndash;&gt;
+		&lt;!&ndash;<property name="driverClass" value="${jdbc.driver}" />
 		<property name="jdbcUrl" value="${jdbc.url}" />
 		<property name="user" value="${jdbc.user}" />
-		<property name="password" value="${jdbc.password}" />-->
+		<property name="password" value="${jdbc.password}" />&ndash;&gt;
 
-		<!-- c3p0连接池的私有属性 -->
+		&lt;!&ndash; c3p0连接池的私有属性 &ndash;&gt;
 		<property name="maxPoolSize" value="30" />
 		<property name="minPoolSize" value="10" />
-		<!-- 关闭连接后不自动commit -->
+		&lt;!&ndash; 关闭连接后不自动commit &ndash;&gt;
 		<property name="autoCommitOnClose" value="false" />
-		<!-- 获取连接超时时间 -->
+		&lt;!&ndash; 获取连接超时时间 &ndash;&gt;
 		<property name="checkoutTimeout" value="10000" />
-		<!-- 当获取连接失败重试次数 -->
+		&lt;!&ndash; 当获取连接失败重试次数 &ndash;&gt;
 		<property name="acquireRetryAttempts" value="2" />
 	</bean>
+-->
 
-	<bean id="master" parent="abstractDataSource">
-		<!-- 配置连接池属性 -->
+	<bean id="simpleDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="${jdbc.driver}" />
-		<property name="jdbcUrl" value="${jdbc.master.url}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
 		<property name="user" value="${jdbc.user}" />
-		<property name="password" value="${jdbc.password}" />
-	</bean>
+		<property name="password" value="${jdbc.localhost.password}" />
 
-	<bean id="slave" parent="abstractDataSource">
-		<!-- 配置连接池属性 -->
-		<property name="driverClass" value="${jdbc.driver}" />
-		<property name="jdbcUrl" value="${jdbc.slave.url}" />
-		<property name="user" value="${jdbc.user}" />
-		<property name="password" value="${jdbc.password}" />
+
+		<property name="maxPoolSize" value="30" />
+		<property name="minPoolSize" value="10" />
+		<property name="autoCommitOnClose" value="false" />
+		<property name="checkoutTimeout" value="10000" />
+		<property name="acquireRetryAttempts" value="2" />
 	</bean>
+	<!--
+        <bean id="master" parent="abstractDataSource">
+            &lt;!&ndash; 配置连接池属性 &ndash;&gt;
+            <property name="driverClass" value="${jdbc.driver}" />
+            <property name="jdbcUrl" value="${jdbc.master.url}" />
+            <property name="user" value="${jdbc.user}" />
+            <property name="password" value="${jdbc.password}" />
+        </bean>
+
+        <bean id="slave" parent="abstractDataSource">
+            &lt;!&ndash; 配置连接池属性 &ndash;&gt;
+            <property name="driverClass" value="${jdbc.driver}" />
+            <property name="jdbcUrl" value="${jdbc.slave.url}" />
+            <property name="user" value="${jdbc.user}" />
+            <property name="password" value="${jdbc.password}" />
+        </bean>-->
 
 	<!--配置动态数据源，这里targetDataSource就是路由数据源所对应的名称-->
-	<bean id="dynamicDataSource" class="com.yang.dao.split.DynamicDateSource">
+	<!--<bean id="dynamicDataSource" class="com.yang.dao.split.DynamicDateSource">
 		<property name="targetDataSources">
 			<map>
 				<entry value-ref="master" key="master"/>
 				<entry value-ref="slave" key="slave"/>
 			</map>
 		</property>
-	</bean>
+	</bean>-->
 
-	<bean id="dataSource" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy">
-		<property name="targetDataSource" ref="dynamicDataSource"/>
-	</bean>
+	<!--<bean id="dataSource" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy">-->
+		<!--<property name="targetDataSource" ref="dynamicDataSource"/>-->
+	<!--</bean>-->
 
 	<!-- 3.配置SqlSessionFactory对象 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 注入数据库连接池 -->
-		<property name="dataSource" ref="dataSource" />
+		<property name="dataSource" ref="simpleDataSource" />
 		<!-- 配置MyBaties全局配置文件:mybatis-config.xml -->
 		<property name="configLocation" value="classpath:mybatis-config.xml" />
 		<!-- 扫描entity包 使用别名 -->

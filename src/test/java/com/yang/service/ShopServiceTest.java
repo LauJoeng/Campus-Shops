@@ -6,6 +6,7 @@ import com.yang.entity.Area;
 import com.yang.entity.Shop;
 import com.yang.entity.ShopCategory;
 import com.yang.enums.ShopStateEnum;
+import jdk.internal.util.xml.impl.Input;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,6 +22,16 @@ public class ShopServiceTest extends BaseTest {
 
     @Autowired
     private ShopService shopService;
+
+    @Test
+    public void testModifyShop() throws FileNotFoundException {
+        Shop shop = shopService.getByShopId(51L);
+        shop.setShopName("修改后的店铺名");
+        File shopImg = new File("C:\\Users\\Yang\\Desktop\\ps图片\\meggy2.jpg");
+        InputStream is = new FileInputStream(shopImg);
+        ShopExecution shopExecution = shopService.modifyShop(shop, is, "meggy2.jpg");
+        System.out.println("新图片地址为:"+shopExecution.getShop().getShopImg());
+    }
 
     @Test
     public void testAddShop() throws FileNotFoundException {

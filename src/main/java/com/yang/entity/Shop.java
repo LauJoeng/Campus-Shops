@@ -25,6 +25,15 @@ public class Shop {
 	private Area area;
 	private ShopCategory shopCategory;
 	private ShopCategory parentCategory;
+	private PersonInfo owner;
+
+	public PersonInfo getOwner() {
+		return owner;
+	}
+
+	public void setOwner(PersonInfo owner) {
+		this.owner = owner;
+	}
 
 	public Long getShopId() {
 		return shopId;

@@ -1,32 +1,14 @@
-2019-02-09 20:08:58.683 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.AreaDao.queryArea]use[slave]Strategy,SqlCommondType[SELECT]..
-2019-02-09 20:08:58.710 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:slave
-2019-02-09 20:15:33.411 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.AreaDao.queryArea]use[slave]Strategy,SqlCommondType[SELECT]..
-2019-02-09 20:15:33.415 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:slave
-2019-02-09 20:20:36.630 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopCategoryDao.queryShopCategory]use[slave]Strategy,SqlCommondType[SELECT]..
-2019-02-09 20:20:36.636 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:slave
-2019-02-09 20:21:32.229 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.insertShop]use[]Strategy,SqlCommondType[INSERT]..
-2019-02-09 20:21:32.232 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:
-2019-02-09 20:23:50.130 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.insertShop]use[]Strategy,SqlCommondType[INSERT]..
-2019-02-09 20:23:50.136 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:
-2019-02-09 20:24:46.415 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.insertShop]use[]Strategy,SqlCommondType[INSERT]..
-2019-02-09 20:24:46.423 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:
-2019-02-09 20:25:47.571 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.insertShop]use[]Strategy,SqlCommondType[INSERT]..
-2019-02-09 20:25:47.579 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:
-2019-02-09 20:27:15.181 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.insertShop]use[]Strategy,SqlCommondType[INSERT]..
-2019-02-09 20:27:15.189 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:
-2019-02-09 20:40:42.435 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.insertShop]use[]Strategy,SqlCommondType[INSERT]..
-2019-02-09 20:40:42.458 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:
-2019-02-09 20:42:49.169 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.AreaDao.queryArea]use[slave]Strategy,SqlCommondType[SELECT]..
-2019-02-09 20:42:49.173 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:slave
-2019-02-09 20:43:28.159 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.insertShop]use[master]Strategy,SqlCommondType[INSERT]..
-2019-02-09 20:43:28.165 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:master
-2019-02-09 20:46:04.547 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.AreaDao.queryArea]use[slave]Strategy,SqlCommondType[SELECT]..
-2019-02-09 20:46:04.552 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:slave
-2019-02-09 20:47:18.921 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.insertShop]use[master]Strategy,SqlCommondType[INSERT]..
-2019-02-09 20:47:18.928 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:master
-2019-02-09 20:49:47.086 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.insertShop]use[master]Strategy,SqlCommondType[INSERT]..
-2019-02-09 20:49:47.094 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:master
-2019-02-09 20:49:47.231 [main] DEBUG com.yang.util.ImageUtil - current relativeAddr is:upload\item\shop\52\2019020920494776095.jpg
-2019-02-09 20:49:47.232 [main] DEBUG com.yang.util.ImageUtil - current completeAddr is:H:\projectdev\image\upload\item\shop\52\2019020920494776095.jpg
-2019-02-09 20:49:48.073 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.updateShop]use[master]Strategy,SqlCommondType[UPDATE]..
-2019-02-09 20:49:48.073 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:master
+2019-02-10 20:33:26.313 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.insertShop]use[master]Strategy,SqlCommondType[INSERT]..
+2019-02-10 20:33:26.352 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:master
+2019-02-10 20:33:26.532 [main] DEBUG com.yang.util.ImageUtil - current relativeAddr is:upload\item\shop\50\2019021020332632312.jpg
+2019-02-10 20:33:26.532 [main] DEBUG com.yang.util.ImageUtil - current completeAddr is:H:\projectdev\image\upload\item\shop\50\2019021020332632312.jpg
+2019-02-10 20:33:28.041 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.updateShop]use[master]Strategy,SqlCommondType[UPDATE]..
+2019-02-10 20:33:28.043 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:master
+2019-02-10 20:53:12.633 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.queryByShopId]use[slave]Strategy,SqlCommondType[SELECT]..
+2019-02-10 20:53:12.690 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:slave
+2019-02-10 20:55:08.101 [main] DEBUG com.yang.dao.split.DynamicDataSourceInterceptor - 设置方法[com.yang.dao.ShopDao.queryByShopId]use[slave]Strategy,SqlCommondType[SELECT]..
+2019-02-10 20:55:08.106 [main] DEBUG com.yang.dao.split.DynamicDatasourceHolder - 所使用的数据源是:slave
+2019-02-10 21:22:56.719 [main] DEBUG com.yang.util.ImageUtil - current relativeAddr is:upload\item\shop\51\2019021021225676117.jpg
+2019-02-10 21:22:56.723 [main] DEBUG com.yang.util.ImageUtil - current completeAddr is:H:\projectdev\image\upload\item\shop\51\2019021021225676117.jpg
+2019-02-10 21:29:59.402 [main] DEBUG com.yang.util.ImageUtil - current relativeAddr is:upload\item\shop\51\2019021021295910273.jpg
+2019-02-10 21:29:59.406 [main] DEBUG com.yang.util.ImageUtil - current completeAddr is:H:\projectdev\image\upload\item\shop\51\2019021021295910273.jpg
