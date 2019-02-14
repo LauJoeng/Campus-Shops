@@ -3,6 +3,7 @@ package com.yang.service;
 import com.yang.BaseTest;
 import com.yang.dto.ShopExecution;
 import com.yang.entity.Area;
+import com.yang.entity.PersonInfo;
 import com.yang.entity.Shop;
 import com.yang.entity.ShopCategory;
 import com.yang.enums.ShopStateEnum;
@@ -15,6 +16,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Date;
+import java.util.List;
 
 import static net.sf.ezmorph.test.ArrayAssertions.assertEquals;
 
@@ -22,6 +24,19 @@ public class ShopServiceTest extends BaseTest {
 
     @Autowired
     private ShopService shopService;
+
+    @Test
+    public void testQueryShopList(){
+        Shop shop = new Shop();
+        PersonInfo personInfo = new PersonInfo();
+        personInfo.setUserId(8L);
+        shop.setOwner(personInfo);
+        ShopCategory sc = new ShopCategory();
+        sc.setShopCategoryId(14L);
+        shop.setShopCategory(sc);
+        ShopExecution se = shopService.getShopList(shop, 1, 2);
+        System.out.println(se);
+    }
 
     @Test
     public void testModifyShop() throws FileNotFoundException {

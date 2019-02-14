@@ -83,4 +83,15 @@ public class ShopExecution {
     public void setShopList(List<Shop> shopList) {
         this.shopList = shopList;
     }
+
+    @Override
+    public String toString() {
+        return "ShopExecution{" +
+                "state=" + state +
+                ", stateInfo='" + stateInfo + '\'' +
+                ", count=" + count +
+                ", shop=" + shop +
+                ", shopList=" + shopList +
+                '}';
+    }
 }
